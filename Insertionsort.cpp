@@ -9,14 +9,8 @@ void desplegarArreglo (const std::vector<int> &arr)
             std::cout << a << " ";
     }
     
-//void insertionSort (56
-
-int main()
+void insertionSort (std::vector<int> &numeros)
 {
-    std::vector<int> numeros {5,9,7,4,1};
-    
-    desplegarArreglo(numeros);
-    
     for (int i = 1; i < size(numeros); i++)
     {
         int temp = numeros[i];
@@ -28,9 +22,17 @@ int main()
                j--;
             }
         numeros[j + 1] = temp;
-    } 
+    }    
+}
+
+int main()
+{
+    std::vector<int> numeros {5,9,7,4,1};
     
+    desplegarArreglo(numeros);
+    insertionSort(numeros);
     
-   
+    std::cout << "\n";
+    desplegarArreglo(numeros);   
 
 }
