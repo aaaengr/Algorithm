@@ -27,12 +27,18 @@ void insertionSort (std::vector<int> &numeros)
 
 int main()
 {
-    std::vector<int> numeros {5,9,7,4,1};
+    std::vector<int> numeros {5,7,2,9,0};
+    std::vector<int> copia{};
     
-    desplegarArreglo(numeros);
-    insertionSort(numeros);
+    // Copying vector v1 into vector v2
+    copy(numeros.begin(), numeros.end(), back_inserter(copia));
     
-    std::cout << "\n";
-    desplegarArreglo(numeros);   
+    desplegarArreglo(copia);
+    insertionSort(copia);
+    
+    std::cout << "\nOriginal: ";
+    desplegarArreglo(numeros); 
+    std::cout << "\nOrdenado: ";
+    desplegarArreglo(copia);  
 
 }
