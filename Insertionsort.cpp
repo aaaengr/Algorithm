@@ -28,8 +28,6 @@ int main()
                j--;
             }
         numeros[j + 1] = temp;
-        std::cout << "\n";
-        desplegarArreglo(numeros);
     } 
     
     
